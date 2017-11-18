@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation"
+		value="false" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.i18n.resources"
+		value="ApplicationResources" />
+
+	<package name="login" extends="struts-default" namespace="/">
+	<action name="login"
+			class="net.org.amir.action.LoginAction" method="login">
+			<result name="success">Home.jsp</result>
+			<result name="input">Login.jsp</result>
+			<result name="error">Error.jsp</result>
+		</action>
+		<action name="resister"
+			class="net.org.amir.action.User_resisterAction" method="resister">
+			<result name="success">ChooseUsername.jsp</result>
+			<result name="input">Accountresister.jsp</result>
+		</action>
+		<action name="credential"
+			class="net.org.amir.action.LoginAction" method="completeRegister">
+			<result name="success">Home.jsp</result>
+			<result name="error">Error.jsp</result>
+		</action>
+		<action name="changepassword"
+			class="net.org.amir.action.LoginAction" method="changePassword">
+			<result name="success">changepasswordsuccess.jsp</result>
+			<result name="error">Error.jsp</result>
+		</action>
+		<action name="*"
+			class="net.org.amir.action.LoginAction" method="user_transactionHome">
+			<result name="success">transction.jsp</result>
+			<result name="error">Error.jsp</result>
+		</action>
+		<action name="Transaction"
+			class="net.org.amir.action.UsertransactionAction" method="accountTransaction">
+			<result name="success">Home.jsp</result>
+			<result name="error">Error.jsp</result>
+		</action>
+		<action name="logout"
+			class="net.org.amir.action.LoginAction" method="logout">
+			<result name="success">logout.jsp</result>
+			<result name="error">Error.jsp</result>
+		</action>
+	</package>
+</struts>

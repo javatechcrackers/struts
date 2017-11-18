@@ -1,0 +1,27 @@
+ html,body{
+        height: 100%
+    }
+
+    #header{
+         background-color: yellow;
+    }
+
+    #holder {
+        min-height: 100%;
+        position:relative;
+    }
+
+    #body {
+        padding-bottom: 100px;
+       
+    }
+
+    #footer{
+        background-color: lime;
+        bottom: 0;
+        height: 70px;
+        left: 0;
+        align:center;
+        position: absolute;
+        right: 0;
+    }

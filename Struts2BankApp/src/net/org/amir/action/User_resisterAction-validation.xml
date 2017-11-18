@@ -1,0 +1,21 @@
+<!DOCTYPE validators PUBLIC 
+"-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+   <field name="Userdto.firstName">
+      <field-validator type="required">
+         <message>
+            The name is required.
+         </message>
+      </field-validator>
+   </field>
+
+   <field name="Userdto.lastName">
+     <field-validator type="required">
+         <message>
+            Age must be in between 28 and 65
+         </message>
+      </field-validator>
+   </field>
+</validators>
